@@ -69,7 +69,8 @@ from sklearn.linear_model import LogisticRegression
 from os import path
 from pathlib import PurePath
 from tensorflow.python.util import deprecation
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
 import multiprocessing
 
 deprecation._PRINT_DEPRECATION_WARNINGS = False

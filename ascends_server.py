@@ -23,7 +23,7 @@ import pickle
 import keras
 from pathlib import PurePath
 
-__UPLOADS__ = PurePath("static/uploads/")
+__UPLOADS__ = PurePath("/home/jovyan/uploads/")
 
 define("port", default=7777, help="run on the given port", type=int)
 define("debug", default=False, help="run in debug mode")

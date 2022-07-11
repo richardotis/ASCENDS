@@ -27,7 +27,7 @@ function load_data() {
   });
   
   $.ajax({
-    url: '/open_file',
+    url: 'open_file',
     type: 'POST',
     data: dataToSend,
     processData: false,
@@ -136,7 +136,7 @@ function load_data_to_table() {
   });
 
   $.ajax({
-    url: '/open_file',
+    url: 'open_file',
     type: 'POST',
     data: dataToSend,
     processData: false,

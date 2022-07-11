@@ -13,17 +13,17 @@
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
     integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
   <script type="text/javascript" language="javascript"
-    src="http://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+    src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
   <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/dataTables.jqueryui.min.css">
 
   <script type="text/javascript" language="javascript"
     src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.min.css" />
 
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <script type="text/javascript" src="static/common.js"></script>
   <link rel="stylesheet" href="static/custom.css">
@@ -78,7 +78,7 @@
 
       $.ajax({
 
-        url: '/get_model_info',
+        url: 'get_model_info',
         type: 'POST',
         data: dataToSend,
         processData: false,
@@ -128,7 +128,7 @@
 
       $.ajax({
 
-        url: '/get_model_file_list',
+        url: 'get_model_file_list',
         type: 'POST',
         data: dataToSend,
         processData: false,
@@ -204,7 +204,7 @@
       var dataToSend = JSON.stringify(data);
       $.ajax({
 
-        url: '/get_preset_file_list',
+        url: 'get_preset_file_list',
         type: 'POST',
         data: dataToSend,
         processData: false,
@@ -255,7 +255,7 @@
 
         $.ajax({
 
-          url: '/delete_model',
+          url: 'delete_model',
           type: 'POST',
           data: dataToSend,
           processData: false,
@@ -365,7 +365,7 @@
 
         $.ajax({
 
-          url: '/predict_ml',
+          url: 'predict_ml',
           type: 'POST',
           data: dataToSend,
           processData: false,
@@ -439,7 +439,7 @@
           $("body").css("cursor", "progress");
           $.ajax({
 
-            url: '/save_model',
+            url: 'save_model',
             type: 'POST',
             data: dataToSend,
             processData: false,
@@ -506,7 +506,7 @@
         $("body").css("cursor", "progress");
         $.ajax({
 
-          url: '/execute_ml_analysis',
+          url: 'execute_ml_analysis',
           type: 'POST',
           data: dataToSend,
           processData: false,
@@ -607,7 +607,7 @@
         $("body").css("cursor", "progress");
         $.ajax({
 
-          url: '/execute_ml_tuning',
+          url: 'execute_ml_tuning',
           type: 'POST',
           data: dataToSend,
           processData: false,
@@ -631,17 +631,17 @@
 
       $('#proceed-to-predict').click(function (event) {
         // changing this to POST may be required for better security
-        window.location = "/predict_page";
+        window.location = "predict_page";
       });
 
       $('#go-predict').click(function (event) {
         // changing this to POST may be required for better security
-        window.location = "/predict_page";
+        window.location = "predict_page";
       });
 
       $('#go-corr').click(function (event) {
         // changing this to POST may be required for better security
-        window.location = "/feature_analysis?path_to_data=" + path_to_data + "&target_col=" + target_col + "&input_cols=" + input_cols;
+        window.location = "feature_analysis?path_to_data=" + path_to_data + "&target_col=" + target_col + "&input_cols=" + input_cols;
       });
 
       $('#add-to-target').click(function (event) {

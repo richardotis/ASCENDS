@@ -6,6 +6,8 @@ import argparse
 import statistics
 import sys
 import pprint
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
 import keras
 import ascends as asc
 import ast
@@ -14,10 +16,8 @@ from sklearn.metrics import classification_report
 from sklearn.metrics import confusion_matrix
 from pathlib import PurePath
 import numpy as np
-import tensorflow as tf
 import random as rn
 from tensorflow.python.client import device_lib
-from keras import backend as K
 import ascends as asc
 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
@@ -29,7 +29,6 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 #keras.backend.set_session(sess)
 
 print(device_lib.list_local_devices())
-print("GPUs for Keras:",K.tensorflow_backend._get_available_gpus())
 
 # This is a tool for training machine learning models for a regression (value prediction) task
 
